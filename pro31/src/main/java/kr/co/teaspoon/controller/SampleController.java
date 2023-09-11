@@ -65,14 +65,14 @@ public class SampleController {
     @RequestMapping(value = "get6.do/{id}/{pw}")
     public String get6(@PathVariable("id") String id, @PathVariable("pw") String pw, Model model) throws Exception {
         model.addAttribute("id", id);
-        model.addAttribute("pw,", pw);
+        model.addAttribute("pw", pw);
         return "/sample/get6";
     }
 
     @RequestMapping(value = "get7.do", method = RequestMethod.GET)
     public ModelAndView get7(@RequestParam("id") String id, @RequestParam("pw") String pw, ModelAndView mav) throws Exception {
         mav.addObject("id", id);
-        mav.addObject("pw,", pw);
+        mav.addObject("pw", pw);
         mav.setViewName("/sample/get7");
         return mav;
     }
@@ -130,10 +130,10 @@ public class SampleController {
         return mav;
     }
 
-    @GetMapping("list.do")
+    @RequestMapping("list.do")
     public String sampleList(Model model) throws Exception {
-        List<Sample> sampleList = sampleService.sampleList();
-        model.addAttribute("sampleList", sampleList);
+        List<Sample> samList = sampleService.sampleList();
+        model.addAttribute("sampleList", samList);
         return "/sample/sampleList";
     }
 
