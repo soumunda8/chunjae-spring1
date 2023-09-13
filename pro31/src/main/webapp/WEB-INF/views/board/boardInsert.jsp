@@ -2,23 +2,30 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="fn" uri = "http://java.sun.com/jsp/jstl/functions"%>
-<c:set var="path" value="${pageContext.request.contextPath }" />
+<%--<c:set var="path" value="${pageContext.request.contextPath }" />--%>
+<c:set var="path" value="/pro3_war" />
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<jsp:include page="../include/head.jsp" />
 	<title>글 쓰기</title>
-    <jsp:include page="../include/head.jsp"></jsp:include>
 </head>
 <body>
-	<header id="header">
-		<!-- 헤더 부분 인클루드 -->
-	 	<jsp:include page="../include/hd.jsp"></jsp:include>
-    </header>
+	<jsp:include page="../include/hd.jsp" />
+	<section class="hero is-info">
+		<div class="container is-fullhd">
+			<div class="hero-body">
+				<p class="title">
+					Info hero
+				</p>
+				<p class="subtitle">
+					Info subtitle
+				</p>
+			</div>
+		</div>
+	</section>
 	
-	<div class="container" id="container">
+	<div class="container is-fullhd">
 	    <div class="row column text-center">
 	      <h2 class="h1">공지사항 글쓰기</h2>
 	      <hr>
@@ -50,9 +57,6 @@
 	      </div>
 	    </div>
 	</div>
-    <footer id="footer" class="footer-nav row expanded collapse">
-    	<!-- 푸터 부분 인클루드 -->
-    	<jsp:include page="../include/ft.jsp"></jsp:include>
-    </footer>
+	<jsp:include page="../include/ft.jsp" />
 </body>
 </html>

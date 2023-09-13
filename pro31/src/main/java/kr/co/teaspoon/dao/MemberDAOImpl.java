@@ -63,4 +63,8 @@ public class MemberDAOImpl implements MemberDAO{
         sqlSession.delete("member.memberDelete", id);
     }
 
+    @Override
+    public Member loginAjax(Member member) throws Exception {
+        return sqlSession.selectOne("member.login", member);
+    }
 }

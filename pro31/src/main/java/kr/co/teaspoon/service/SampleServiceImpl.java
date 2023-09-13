@@ -1,6 +1,6 @@
 package kr.co.teaspoon.service;
 
-import kr.co.teaspoon.dao.SampleDAOImpl;
+import kr.co.teaspoon.dao.SampleDAO;
 import kr.co.teaspoon.dto.Sample;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,7 +11,7 @@ import java.util.List;
 public class SampleServiceImpl implements SampleService {
 
     @Autowired
-    private SampleDAOImpl sampleDAO;
+    private SampleDAO sampleDAO;
 
     @Override
     public List<Sample> sampleList() throws Exception {

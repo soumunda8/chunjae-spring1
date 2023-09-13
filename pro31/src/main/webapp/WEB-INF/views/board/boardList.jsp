@@ -5,23 +5,28 @@
 <%@ page import="java.util.*, java.lang.*" %>
 <%@ page import="java.text.*, java.net.InetAddress" %>
 <%--<c:set var="path" value="${pageContext.request.contextPath }" />--%>
-<c:set var="path" value="${pageContext.request.contextPath }" />
+<c:set var="path" value="/pro3_war" />
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<jsp:include page="../include/head.jsp" />
 	<title>공지사항 목록</title>
-    <!-- 헤드 부분 인클루드 -->
-    <jsp:include page="../include/head.jsp"></jsp:include>
 </head>
 <body>
+	<jsp:include page="../include/hd.jsp" />
+	<section class="hero is-info">
+		<div class="container is-fullhd">
+			<div class="hero-body">
+				<p class="title">
+					Info hero
+				</p>
+				<p class="subtitle">
+					Info subtitle
+				</p>
+			</div>
+		</div>
+	</section>
 	<div class="container is-fullhd">
-		<header id="header">
-			<!-- 헤더 부분 인클루드 -->
-			<jsp:include page="../include/hd.jsp"></jsp:include>
-		</header>
 		<div>
 			<div class="row column text-center">
 			  <h2 class="h1">공지사항 목록</h2>
@@ -59,10 +64,7 @@
 
 			</div>
 		</div>
-		<footer id="footer" class="footer-nav row expanded collapse">
-			<!-- 푸터 부분 인클루드 -->
-			<jsp:include page="../include/ft.jsp"></jsp:include>
-		</footer>
 	</div>
+	<jsp:include page="../include/ft.jsp" />
 </body>
 </html>

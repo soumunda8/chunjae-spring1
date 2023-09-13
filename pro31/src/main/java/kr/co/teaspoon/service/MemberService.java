@@ -16,5 +16,6 @@ public interface MemberService {
     public void memberEdit(Member member) throws Exception;
     public void memberNoUse(String id) throws Exception;
     public void memberDelete(String id) throws Exception;
+    public Member loginAjax(Member member) throws Exception;
 
 }

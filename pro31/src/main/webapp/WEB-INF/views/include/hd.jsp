@@ -56,29 +56,16 @@
                     <div class="navbar-item">
                         <div class="buttons">
                             <c:if test="${empty sid}">
-                                <a href="${path }/member/term.do" class="button is-primary">
-                                    <strong>Sign up</strong>
-                                </a>
-                                <a href="${path }/member/login.do" class="button is-light">
-                                    Log in
-                                </a>
+                                <a href="${path }/member/term.do" class="button is-primary"><strong>Sign up</strong></a>
+                                <a href="${path }/member/login.do" class="button is-light">Log in</a>
                             </c:if>
                             <c:if test="${!empty sid}">
-                                <a href="${path }/member/mypage.do" class="button is-primary">
-                                    mypage
-                                </a>
-                                <a href="${path }/member/logout.do" class="button is-light">
-                                    <strong>Log out</strong>
-                                </a>
+                                <a href="${path }/member/mypage.do" class="button is-primary">mypage</a>
+                                <a href="${path }/member/logout.do" class="button is-light"><strong>Log out</strong></a>
                                 <c:if test="${sid.equals('admin')}">
-                                    <a href="${path }/member/list.do" class="button is-light">
-                                        MemberList
-                                    </a>
+                                    <a href="${path }/member/list.do" class="button is-light">MemberList</a>
                                 </c:if>
                             </c:if>
-                            <a href="${path }/member/list.do" class="button is-light">
-                                MemberList
-                            </a>
                         </div>
                     </div>
                 </div>
